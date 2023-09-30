@@ -2,16 +2,24 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAccountContext } from "../../context";
+import SearchBar from './searchBar';
 import "./Navbar.style.scss";
 
 function Navbar() {
   const { loggedIn, logout } = useAccountContext();
   const navigate = useNavigate();
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');  // Added state for search term
 
   function toggleMode() {
     setIsDarkMode((prevMode) => !prevMode);
   }
+
+  // Handler function for search term changes
+  const handleSearchChange = (term: string) => {
+    setSearchTerm(term);
+    // Perform other actions if needed
+  };
 
   return (
     <nav className={`navbar ${isDarkMode ? "dark" : "light"}`}>
@@ -22,6 +30,10 @@ function Navbar() {
           alt="Logo"
         />
       </Link>
+      
+      {/* Added SearchBar component */}
+      <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
+      
       <div className="navbar__account">
         {loggedIn() === false ? (
           <>
