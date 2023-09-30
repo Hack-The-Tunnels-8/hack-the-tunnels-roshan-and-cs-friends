@@ -31,6 +31,9 @@ function Product() {
         {message && <p>{message}</p>}
         {product && (
           <>
+            <div className="grid-2">
+              <img src="https://images.footlocker.com/is/image/EBFL2/6266158_a1?wid=520&hei=520&fmt=png-alpha" alt="" />
+            </div>
             <div className="product-page__product">
               <h3>Title: {product.title}</h3>
               <p>ID: {id}</p>
