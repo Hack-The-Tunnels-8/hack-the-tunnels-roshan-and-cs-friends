@@ -26,7 +26,7 @@ function Login() {
       navigate("/");
     }
   }, [loggedIn, navigate]);
-
+  
   return (
     <Page>
       <div className="login-page">
