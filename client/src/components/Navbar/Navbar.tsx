@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAccountContext } from "../../context";
-import SearchBar from './searchBar';
+import SearchBar from './SearchBar';
 import "./Navbar.style.scss";
 
 function Navbar() {
