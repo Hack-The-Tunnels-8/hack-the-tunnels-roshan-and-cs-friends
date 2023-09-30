@@ -1,0 +1,10 @@
+.product-page{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1fr 2fr;
+}
+.product-page__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

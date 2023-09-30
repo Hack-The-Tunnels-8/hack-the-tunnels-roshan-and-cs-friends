@@ -26,6 +26,7 @@ function Product() {
   return (
     <Page>
       <div className="product-page">
+<h1>not-Product-Page</h1>
         {message && <p>{message}</p>}
         {product && (
           <>

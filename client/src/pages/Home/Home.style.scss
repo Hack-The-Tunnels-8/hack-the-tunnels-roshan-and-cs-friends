@@ -1,9 +1,13 @@
 .home-page {
-  &__title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; 
+
+  &title {
     color: red;
   }
 
-  &__products {
+  &products {
     display: flex;
     flex-direction: column;
 
