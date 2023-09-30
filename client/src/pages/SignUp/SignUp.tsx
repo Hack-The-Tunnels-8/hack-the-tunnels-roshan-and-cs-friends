@@ -1,11 +1,46 @@
 import { Page } from "../../components";
+import { useState } from "react";
 import "./SignUp.style.scss";
+import { signUp } from "../../infrastructure/ServiceAPI";
 
 function SignUp() {
+  const [message, setMessage] = useState(null);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const attemptSignup = async () => {
+    try {
+      const message = await signUp(email, password);
+      setMessage(message);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Page>
       <div className="signup-page">
         <h1>Sign Up</h1>
+
+        <label>
+            Email Address:
+            <br></br>
+            <input type="text" name="email" value={email}
+            onChange={(e) => setEmail(e.target.value)}/>
+          </label>
+          <br></br>
+          <label>
+            Password:
+            <br></br>
+            <input type="password" name="password" value={password}
+            onChange={(e) => setPassword(e.target.value)}/>
+          </label>
+          <br></br>
+
+          <button onClick={() => attemptSignup()}>
+          Signup
+          </button>
+          {message && <p>{message}</p>}
       </div>
     </Page>
   );
