@@ -1,5 +1,7 @@
 .home-page {
   &__title {
+    margin: 0;
+    padding-top: 15vh;
     color: black;
     animation-name: backAndForth;
     animation-duration: 3s;
