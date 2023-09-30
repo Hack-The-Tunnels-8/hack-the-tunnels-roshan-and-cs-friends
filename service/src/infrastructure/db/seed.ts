@@ -1,13 +1,13 @@
 import { AccountService, ProductService } from "../../services";
 
 const seed = async () => {
-  const admin = await AccountService.create(
+  /*const admin = await AccountService.create(
     "admin@email.com",
     "password",
     "ADMIN",
   );
   const user = await AccountService.create("user@email.com", "password");
-
+*/
   const exampleProduct = await ProductService.create(
     "Example Product #1",
     "This is an example product",
