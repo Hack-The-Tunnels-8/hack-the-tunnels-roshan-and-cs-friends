@@ -49,7 +49,7 @@ function Checkout() {
               <h3>Title: {product.title}</h3>
             </div>
             <button onClick={() => createOrder()}>
-              Create Order (with customer set in code)
+              Order Now!
             </button>
           </>
         )}
