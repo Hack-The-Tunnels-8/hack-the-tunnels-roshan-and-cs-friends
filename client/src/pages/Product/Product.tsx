@@ -5,6 +5,7 @@ import { ServiceAPI } from "../../infrastructure";
 import "./Product.style.scss";
 
 function Product() {
+  
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [message, setMessage] = useState(null);
