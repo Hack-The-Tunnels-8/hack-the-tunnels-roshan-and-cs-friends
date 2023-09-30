@@ -48,7 +48,7 @@ function Login() {
           <br></br>
 
           <button onClick={() => attemptLogin()}>
-          Login (as user set in code)
+          Login
           </button>
         {message && <p>{message}</p>}
         
