@@ -1,9 +1,9 @@
 import React from 'react';
-import './SearchBar.css';  // Importing the CSS for styling
+import './SearchBar.css';
 
 interface Props {
     searchTerm: string;
-    onSearchChange: (term: string) => void;  // Added a callback for handling search term change
+    onSearchChange: (term: string) => void;
 }
 
 const SearchBar: React.FC<Props> = ({ searchTerm, onSearchChange }) => {
