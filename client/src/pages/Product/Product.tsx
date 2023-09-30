@@ -5,6 +5,7 @@ import { ServiceAPI } from "../../infrastructure";
 import "./Product.style.scss";
 
 function Product() {
+  
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [message, setMessage] = useState(null);
@@ -26,6 +27,7 @@ function Product() {
   return (
     <Page>
       <div className="product-page">
+<h1>not-Product-Page</h1>
         {message && <p>{message}</p>}
         {product && (
           <>

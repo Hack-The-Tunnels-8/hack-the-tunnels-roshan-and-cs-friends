@@ -11,6 +11,7 @@ export const find = async (id: string): Promise<Product | null> => {
     where: { id: parseInt(id) },
   });
 
+  
   return product;
 };
 
