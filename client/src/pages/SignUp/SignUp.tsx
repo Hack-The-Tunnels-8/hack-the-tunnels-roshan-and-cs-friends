@@ -1,9 +1,11 @@
 import { Page } from "../../components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SignUp.style.scss";
 import { signup } from "../../infrastructure/ServiceAPI";
 
 function SignUp() {
+  const navigate = useNavigate();
   const [message, setMessage] = useState(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +17,7 @@ function SignUp() {
     } catch (error) {
       console.log(error);
     }
+    navigate("/");
   };
 
   return (
