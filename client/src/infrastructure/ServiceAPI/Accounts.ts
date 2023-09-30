@@ -16,7 +16,7 @@ export const login = async (email: string, password: string) => {
   return json;
 };
 
-export const signUp = async (email: string, password: string) => {
+export const signup = async (email: string, password: string) => {
   const response = await fetch(
     `${import.meta.env.VITE_API_ROOT}/api/v1/signUp`,
     {

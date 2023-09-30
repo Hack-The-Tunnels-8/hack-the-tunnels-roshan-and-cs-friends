@@ -1,7 +1,7 @@
 import { Page } from "../../components";
 import { useState } from "react";
 import "./SignUp.style.scss";
-import { signUp } from "../../infrastructure/ServiceAPI";
+import { signup } from "../../infrastructure/ServiceAPI";
 
 function SignUp() {
   const [message, setMessage] = useState(null);
@@ -10,7 +10,7 @@ function SignUp() {
 
   const attemptSignup = async () => {
     try {
-      const message = await signUp(email, password);
+      const message = await signup(email, password);
       setMessage(message);
     } catch (error) {
       console.log(error);
